@@ -304,3 +304,24 @@
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Shared.Editor.AdditionalFile.txt","enqueuedNodeIndex":244,"enqueueingNodeAnnotation":"Csc Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Shared.Editor.dll (+2 others)","enqueueingNodeIndex":246}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Shared.Editor.rsp","enqueuedNodeIndex":245,"enqueueingNodeAnnotation":"Csc Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Shared.Editor.dll (+2 others)","enqueueingNodeIndex":246}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.pdb","enqueuedNodeIndex":305,"enqueueingNodeAnnotation":"ScriptAssemblies","enqueueingNodeIndex":5}
+{"msg":"newNode","annotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.AdditionalFile.txt","index":117}
+{"msg":"newNode","annotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.rsp","index":118}
+{"msg":"newNode","annotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.dll.mvfrm.rsp","index":121}
+{"msg":"runNodeAction","annotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.AdditionalFile.txt","index":117}
+{"msg":"runNodeAction","annotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.rsp","index":118}
+{"msg":"noderesult","processed_node_count":172,"number_of_nodes_ever_queued":305,"annotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.AdditionalFile.txt","index":117,"exitcode":0,"outputfile":"Library\\Bee\\artifacts\\1900b0aEDbg.dag\\RoadArchitect.AdditionalFile.txt"}
+{"msg":"runNodeAction","annotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.dll.mvfrm.rsp","index":121}
+{"msg":"noderesult","processed_node_count":173,"number_of_nodes_ever_queued":305,"annotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.rsp","index":118,"exitcode":0,"outputfile":"Library\\Bee\\artifacts\\1900b0aEDbg.dag\\RoadArchitect.rsp"}
+{"msg":"noderesult","processed_node_count":174,"number_of_nodes_ever_queued":305,"annotation":"WriteText Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.dll.mvfrm.rsp","index":121,"exitcode":0,"outputfile":"Library\\Bee\\artifacts\\1900b0aEDbg.dag\\RoadArchitect.dll.mvfrm.rsp"}
+{"msg":"newNode","annotation":"Csc Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.dll (+2 others)","index":119}
+{"msg":"runNodeAction","annotation":"Csc Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.dll (+2 others)","index":119}
+{"msg":"newNode","annotation":"MovedFromExtractorCombine Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.dll.mvfrm","index":122}
+{"msg":"runNodeAction","annotation":"MovedFromExtractorCombine Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.dll.mvfrm","index":122}
+{"msg":"noderesult","processed_node_count":300,"number_of_nodes_ever_queued":305,"annotation":"MovedFromExtractorCombine Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.dll.mvfrm","index":122,"exitcode":0,"outputfile":"Library\\Bee\\artifacts\\1900b0aEDbg.dag\\RoadArchitect.dll.mvfrm"}
+{"msg":"noderesult","processed_node_count":301,"number_of_nodes_ever_queued":305,"annotation":"Csc Library/Bee/artifacts/1900b0aEDbg.dag/RoadArchitect.dll (+2 others)","index":119,"exitcode":0,"outputfile":"Library\\Bee\\artifacts\\1900b0aEDbg.dag\\RoadArchitect.dll"}
+{"msg":"newNode","annotation":"CopyFiles Library/ScriptAssemblies/RoadArchitect.pdb","index":265}
+{"msg":"runNodeAction","annotation":"CopyFiles Library/ScriptAssemblies/RoadArchitect.pdb","index":265}
+{"msg":"noderesult","processed_node_count":302,"number_of_nodes_ever_queued":305,"annotation":"CopyFiles Library/ScriptAssemblies/RoadArchitect.pdb","index":265,"exitcode":0,"outputfile":"Library\\ScriptAssemblies\\RoadArchitect.pdb"}
+{"msg":"newNode","annotation":"CopyFiles Library/ScriptAssemblies/RoadArchitect.dll","index":264}
+{"msg":"runNodeAction","annotation":"CopyFiles Library/ScriptAssemblies/RoadArchitect.dll","index":264}
+{"msg":"noderesult","processed_node_count":303,"number_of_nodes_ever_queued":305,"annotation":"CopyFiles Library/ScriptAssemblies/RoadArchitect.dll","index":264,"exitcode":0,"outputfile":"Library\\ScriptAssemblies\\RoadArchitect.dll"}
