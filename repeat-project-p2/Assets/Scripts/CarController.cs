@@ -30,7 +30,7 @@ public class CarController : MonoBehaviour
 
         verticalInput = Input.GetAxis("Vertical");
 
-        isBreaking = Input.GetKey(KeyCode.Space);
+        isBreaking = Input.GetKey(KeyCode.S);
     }
     private void HandleAcceleration()
     {
