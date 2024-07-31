@@ -8,8 +8,10 @@ public class LapCounter : MonoBehaviour
     public TMP_Text lapCounterText;
     public TMP_Text lapTimeText;
     public TMP_Text timerText;
+    public TMP_Text lapProgressText;
 
     private int lapCount = 0;
+    private int totalLaps = 3;
     private float lapTime = 0f;
     private float startTime;
 
@@ -20,6 +22,7 @@ public class LapCounter : MonoBehaviour
         UpdateLapCountText();
         UpdateLapTimeText();
         UpdateTimerText();
+        UpdateLapProgressText();
     }
     void Update()
     {
@@ -45,6 +48,8 @@ public class LapCounter : MonoBehaviour
 
             startTime = Time.time;
             Debug.Log("New Start Time: " + startTime);
+
+            UpdateLapProgressText();
         }
         else
         {
@@ -75,5 +80,10 @@ public class LapCounter : MonoBehaviour
             float elapsedTime = Time.time - startTime;
             timerText.text = "Time: " + elapsedTime.ToString("F2");
         }
+    }
+    void UpdateLapProgressText()
+    {
+        if (lapProgressText != null)
+            lapProgressText.text = "Lap: " + lapCount + "/" + totalLaps;
     }
 }
