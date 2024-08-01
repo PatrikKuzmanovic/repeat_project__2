@@ -352,6 +352,7 @@
 "Assets/Scripts/CarController.cs"
 "Assets/Scripts/LapCounter.cs"
 "Assets/Scripts/ShootBullet.cs"
+"Assets/Scripts/Speedometer.cs"
 -langversion:9.0
 
 /deterministic
