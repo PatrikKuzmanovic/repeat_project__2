@@ -350,6 +350,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/CarController.cs"
+"Assets/Scripts/Gearbox.cs"
 "Assets/Scripts/LapCounter.cs"
 "Assets/Scripts/ShootBullet.cs"
 "Assets/Scripts/Speedometer.cs"

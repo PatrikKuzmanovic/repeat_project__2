@@ -5,10 +5,10 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 {
     private float horizontalInput, verticalInput;
-    private float currentSteerAngle, currentBreak;
-    private bool isBreaking;
+    private float currentSteerAngle, currentBrake;
+    private bool isBraking, isReversing;
 
-    [SerializeField] private float accelerate, breakFroce, maxSteerAngle;
+    [SerializeField] private float accelerate, brakeFroce, maxSteerAngle, reverseForce;
 
     [SerializeField] private WheelCollider frontLeftWheelCollider, frontRightWheelCollider;
     [SerializeField] private WheelCollider rearLeftWheelCollider, rearRightWheelCollider;
@@ -16,6 +16,12 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
 
+    private Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
     private void FixedUpdate()
     {
         GetInput();
@@ -27,24 +33,45 @@ public class CarController : MonoBehaviour
     private void GetInput()
     {
         horizontalInput = Input.GetAxis("Horizontal");
-
         verticalInput = Input.GetAxis("Vertical");
 
-        isBreaking = Input.GetKey(KeyCode.S);
+        isBraking = Input.GetKey(KeyCode.S);
+        isReversing = rb.velocity.magnitude < 0.1f && isBraking;
     }
     private void HandleAcceleration()
     {
+        if (isReversing)
+        {
+            ApplyReverseForce();
+        }
+        else
+        {
+            ApplyForwardForce();
+        }
+
+        ApplyBraking();
+    }
+
+    private void ApplyForwardForce()
+    {
         frontLeftWheelCollider.motorTorque = verticalInput * accelerate;
         frontRightWheelCollider.motorTorque = verticalInput * accelerate;
-        currentBreak = isBreaking ? breakFroce : 0f;
-        ApplyBreaking();
     }
-    private void ApplyBreaking()
+
+    private void ApplyReverseForce()
     {
-        frontRightWheelCollider.brakeTorque = currentBreak;
-        frontLeftWheelCollider.brakeTorque = currentBreak;
-        rearLeftWheelCollider.brakeTorque = currentBreak;
-        rearRightWheelCollider.brakeTorque = currentBreak;
+        frontLeftWheelCollider.motorTorque = -1 * reverseForce;
+        frontRightWheelCollider.motorTorque = -1 * reverseForce;
+        rearLeftWheelCollider.motorTorque = -1 * reverseForce;
+        rearRightWheelCollider.motorTorque = -1 * reverseForce;
+    }
+    private void ApplyBraking()
+    {
+        currentBrake = isBraking && !isReversing ? brakeFroce : 0f;
+        frontRightWheelCollider.brakeTorque = currentBrake;
+        frontLeftWheelCollider.brakeTorque = currentBrake;
+        rearLeftWheelCollider.brakeTorque = currentBrake;
+        rearRightWheelCollider.brakeTorque = currentBrake;
     }
     private void SteeringHandler()
     {
