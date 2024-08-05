@@ -18,7 +18,6 @@ public class LapCounter : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
-        Debug.Log("LapCounter script started. Start Time: " + startTime);
         UpdateLapCountText();
         UpdateLapTimeText();
         UpdateTimerText();
@@ -31,29 +30,20 @@ public class LapCounter : MonoBehaviour
             lapTime = Time.time - startTime;
             UpdateLapTimeText();
             UpdateTimerText();
-            Debug.Log("Current Lap Time: " + lapTime + " seconds");
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter called by: " + other.gameObject.name);
         if (other.gameObject == car)
         {
             lapCount++;
-            Debug.Log("Lap completed: " + lapCount);
 
             lapTime = Time.time - startTime;
-            Debug.Log("Lap Time: " + lapTime + " seconds");
 
             startTime = Time.time;
-            Debug.Log("New Start Time: " + startTime);
 
             UpdateLapProgressText();
-        }
-        else
-        {
-            Debug.Log("Trigger entered by a different object: " + other.gameObject.name);
         }
     }
 

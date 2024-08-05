@@ -12,6 +12,12 @@ public class AICarController : MonoBehaviour
     public float obstacleDetectionRange = 5f;
     public float avoidanceStrength = 10f;
 
+    [SerializeField] private float maxSteerAngle;
+    [SerializeField] private WheelCollider frontLeftWheelCollider, frontRightWheelCollider;
+    [SerializeField] private WheelCollider rearLeftWheelCollider, rearRightWheelCollider;
+    [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
+    [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
+
     private List<Transform> waypoints;
     private int currentWaypointIndex = 0;
     private float currentSpeed = 0f;
@@ -39,6 +45,8 @@ public class AICarController : MonoBehaviour
         {
             Decelerate();
         }
+
+        UpdateWheels();
     }
 
     private bool AvoidObstacles()
@@ -48,7 +56,6 @@ public class AICarController : MonoBehaviour
         {
             if (hit.collider.CompareTag("Obstacle"))
             {
-                Debug.Log("Obstacle detected: " + hit.collider.name);
                 Vector3 avoidDirection = Vector3.Reflect(transform.forward, hit.normal);
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(avoidDirection), rotationSpeed * Time.deltaTime);
                 return true;
@@ -78,7 +85,13 @@ public class AICarController : MonoBehaviour
             }
         }
 
-        transform.position += transform.forward * currentSpeed * Time.deltaTime;
+        //transform.position += transform.forward * currentSpeed * Time.deltaTime;
+        Vector3 movement = transform.forward * currentSpeed * Time.deltaTime;
+        frontLeftWheelCollider.motorTorque = currentSpeed;
+        frontRightWheelCollider.motorTorque = currentSpeed;
+        rearLeftWheelCollider.motorTorque = currentSpeed;
+        rearRightWheelCollider.motorTorque = currentSpeed;
+        transform.position += movement;
 
         Vector3 futurePosition = transform.position + transform.forward * 2f;
         Vector3 futureDirection = targetWaypoint.position - futurePosition;
@@ -93,8 +106,6 @@ public class AICarController : MonoBehaviour
                 currentWaypointIndex = 0;
             }
         }
-
-        Debug.Log("Current Speed: " + currentSpeed + " | Waypoint: " + currentWaypointIndex);
     }
 
     private void Decelerate()
@@ -103,6 +114,39 @@ public class AICarController : MonoBehaviour
         if (currentSpeed < 0)
             currentSpeed = 0;
 
-        transform.position += transform.forward * currentSpeed * Time.deltaTime;
+        //transform.position += transform.forward * currentSpeed * Time.deltaTime;
+        Vector3 movement = transform.forward * currentSpeed * Time.deltaTime;
+        frontLeftWheelCollider.motorTorque = currentSpeed;
+        frontRightWheelCollider.motorTorque = currentSpeed;
+        rearLeftWheelCollider.motorTorque = currentSpeed;
+        rearRightWheelCollider.motorTorque = currentSpeed;
+        transform.position += movement;
+    }
+
+    private void UpdateWheels()
+    {
+        UpdateSingleWheel(frontLeftWheelCollider, frontLeftWheelTransform);
+        UpdateSingleWheel(frontRightWheelCollider, frontRightWheelTransform);
+        UpdateSingleWheel(rearLeftWheelCollider, rearLeftWheelTransform);
+        UpdateSingleWheel(rearRightWheelCollider, rearRightWheelTransform);
+    }
+    private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
+    {
+        Vector3 pos;
+        Quaternion rot;
+        wheelCollider.GetWorldPose(out pos, out rot);
+        wheelTransform.rotation = rot;
+        wheelTransform.position = pos;
+    }
+
+    private void HandleSteering()
+    {
+        Vector3 direction = waypoints[currentWaypointIndex].position - transform.position;
+        direction.y = 0;
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        float steerAngle = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime).eulerAngles.y;
+        steerAngle = Mathf.Clamp(steerAngle, -maxSteerAngle, maxSteerAngle);
+        frontLeftWheelCollider.steerAngle = steerAngle;
+        frontRightWheelCollider.steerAngle = steerAngle;
     }
 }

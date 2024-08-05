@@ -15,7 +15,7 @@ C:/Users/demon/Desktop/Repeat Project/repeat_project_p2/repeat-project-p2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50326
+63218
 Successfully changed project path to: C:/Users/demon/Desktop/Repeat Project/repeat_project_p2/repeat-project-p2
 C:/Users/demon/Desktop/Repeat Project/repeat_project_p2/repeat-project-p2
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/demon/Desktop/Repeat Project/repeat_project_p2/repeat-project-p2
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3820] Host "[IP] 192.168.1.101 [Port] 0 [Flags] 2 [Guid] 934991661 [EditorId] 934991661 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [14296] Host "[IP] 192.168.178.113 [Port] 0 [Flags] 2 [Guid] 298519422 [EditorId] 298519422 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3820] Host "[IP] 192.168.1.101 [Port] 0 [Flags] 2 [Guid] 934991661 [EditorId] 934991661 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [14296] Host "[IP] 192.168.178.113 [Port] 0 [Flags] 2 [Guid] 298519422 [EditorId] 298519422 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 117.03 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 167.22 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.18f1 (3129e69bc0c7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -67,44 +67,165 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56624
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56988
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.418390 seconds.
+Registered in 0.016420 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 240.29 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 119.85 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in 13.240 seconds
+- Completed reload, in  1.456 seconds
 Domain Reload Profiling:
-	ReloadAssembly (13240ms)
-		BeginReloadAssembly (10021ms)
+	ReloadAssembly (1457ms)
+		BeginReloadAssembly (229ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (2059ms)
-			LoadAssemblies (10021ms)
+			CreateAndSetChildDomain (2ms)
+		EndReloadAssembly (974ms)
+			LoadAssemblies (226ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (1290ms)
+			SetupTypeCache (234ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (615ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (574ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (22ms)
+				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (240ms)
+				RefreshPlugins (120ms)
 				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (255ms)
-				ProcessInitializeOnLoadMethodAttributes (94ms)
-				AfterProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (319ms)
+				ProcessInitializeOnLoadMethodAttributes (116ms)
+				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.030900 seconds.
+Registered in 0.013044 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\demon\Desktop\Repeat Project\repeat_project_p2\repeat-project-p2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\demon\Desktop\Repeat Project\repeat_project_p2\repeat-project-p2\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.396 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1397ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1103ms)
+			LoadAssemblies (120ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (322ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (552ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (104ms)
+				ProcessInitializeOnLoadAttributes (399ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3296 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (421.8 KB). Loaded Objects now: 3785.
+Memory consumption went from 147.2 MB to 146.8 MB.
+Total: 3.850800 ms (FindLiveObjects: 0.354100 ms CreateObjectMapping: 0.180400 ms MarkObjects: 3.042100 ms  DeleteObjects: 0.272800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 227012.698150 seconds.
+  path: Assets/GeeKay3D/First-Aid-Set
+  artifactKey: Guid(9a38e1c37f8c3284db755c816743029b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GeeKay3D/First-Aid-Set using Guid(9a38e1c37f8c3284db755c816743029b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a5dc30ecb19ac3a9ae7d67edbd7211') in 0.048883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.255206 seconds.
+  path: Assets/HealthPickup
+  artifactKey: Guid(cbd866c6d567350458fd5d6de852c078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HealthPickup using Guid(cbd866c6d567350458fd5d6de852c078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e68d8f7bb4959f4025293ebb7bc1aad1') in 0.028468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.654506 seconds.
+  path: Assets/HealthPickup/First-Aid-Set/Assets
+  artifactKey: Guid(2617eba46ea2da3449a9be06a5284b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HealthPickup/First-Aid-Set/Assets using Guid(2617eba46ea2da3449a9be06a5284b0b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd820a6743ccccb7bd59b91d00555dd23') in 0.049055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.914999 seconds.
+  path: Assets/HealthPickup/First-Aid-Set/Assets/Materials
+  artifactKey: Guid(cf900dcb9302eff469641b9ec26da5db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HealthPickup/First-Aid-Set/Assets/Materials using Guid(cf900dcb9302eff469641b9ec26da5db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '619c19e84934d19610d9cfbafc5b4abe') in 0.025537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.029581 seconds.
+  path: Assets/HealthPickup/First-Aid-Set/Assets/Materials/FirstAid_Red.mat
+  artifactKey: Guid(026cb6e42ef5d7a42a11ed06e7596e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HealthPickup/First-Aid-Set/Assets/Materials/FirstAid_Red.mat using Guid(026cb6e42ef5d7a42a11ed06e7596e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1898e4812099942d0584b13cb095d930') in 0.696113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/HealthPickup/First-Aid-Set/Assets/Materials/FirstAid_Green.mat
+  artifactKey: Guid(e076833fec2df4e468280e3a779a4a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HealthPickup/First-Aid-Set/Assets/Materials/FirstAid_Green.mat using Guid(e076833fec2df4e468280e3a779a4a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df86e9d91db69fb92d127126c68632ff') in 0.044604 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.829767 seconds.
+  path: Assets/HealthPickup/First-Aid-Set/Assets/Meshes/FirstAidKit.fbx
+  artifactKey: Guid(4e3859e7d4623f64ca345e315aebd6e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HealthPickup/First-Aid-Set/Assets/Meshes/FirstAidKit.fbx using Guid(4e3859e7d4623f64ca345e315aebd6e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ceaa33da346429fbcc9ba92404c0a1f4') in 0.068987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.602963 seconds.
+  path: Assets/HealthPickup/First-Aid-Set/Assets/Prefabs/FirstAidKit_Biohazard.prefab
+  artifactKey: Guid(2e664cff58592ef46ae18f05c38f52e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HealthPickup/First-Aid-Set/Assets/Prefabs/FirstAidKit_Biohazard.prefab using Guid(2e664cff58592ef46ae18f05c38f52e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5505073f3bb058d51fbf8b2d6666f12') in 0.043760 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/HealthPickup/First-Aid-Set/Assets/Prefabs/FirstAidKit_Red.prefab
+  artifactKey: Guid(360690a7c06559a4f927c76899139848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HealthPickup/First-Aid-Set/Assets/Prefabs/FirstAidKit_Red.prefab using Guid(360690a7c06559a4f927c76899139848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f65d07a9edb92e7889e82b5975770b5') in 0.060857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.502054 seconds.
+  path: Assets/HealthPickup/First-Aid-Set/Assets/Textures/green/FirstAidKit_green_AlbedoTransparency.png
+  artifactKey: Guid(29a6f318db35bab4fa2fe9ed563317c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/HealthPickup/First-Aid-Set/Assets/Textures/green/FirstAidKit_green_AlbedoTransparency.png using Guid(29a6f318db35bab4fa2fe9ed563317c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '936acad6a9ae57a95dee8266732c79eb') in 0.176774 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
