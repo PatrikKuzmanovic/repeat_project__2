@@ -353,6 +353,7 @@
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/CarController.cs"
 "Assets/Scripts/Gearbox.cs"
+"Assets/Scripts/GunPickup.cs"
 "Assets/Scripts/HealthPickup.cs"
 "Assets/Scripts/LapCounter.cs"
 "Assets/Scripts/PlayerHealth.cs"

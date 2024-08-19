@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: b207e15bd888b2b4988370ab4c17b12e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gunPickupEffectPrefab: {fileID: 3645499285893282462, guid: 962a3dc8f344ca240b4731ca20b8c427, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
