@@ -352,6 +352,7 @@
 "Assets/Scripts/AICarInitializer.cs"
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/CarController.cs"
+"Assets/Scripts/EnemyHealth.cs"
 "Assets/Scripts/Gearbox.cs"
 "Assets/Scripts/GunPickup.cs"
 "Assets/Scripts/HealthPickup.cs"
