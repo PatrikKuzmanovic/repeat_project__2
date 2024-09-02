@@ -14,12 +14,25 @@ public class ShootBullet : MonoBehaviour
     public int flameGunDamage = 5;
     public float flameGunCooldownDuration = 5f;
 
+    public AudioClip shootSound;
+    private AudioSource audioSource;
+
     private int bulletsFired = 0;
     private bool isCoolingDown = false;
     private bool isFlameGunActive = false;
     private bool isFlameGunShooting = false;
     private bool isFlameGunUnlocked = false;
     private GameObject activeFlameGunEffect;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+
+        if (shootSound != null)
+        {
+            audioSource.clip = shootSound;
+        }
+    }
 
     private void Update()
     {
@@ -51,6 +64,12 @@ public class ShootBullet : MonoBehaviour
         if (isCoolingDown) return;
 
         Debug.Log("Shooting Bullet");
+
+        if (audioSource != null && shootSound != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
+
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         rb.velocity = bulletSpawnPoint.forward * bulletSpeed;

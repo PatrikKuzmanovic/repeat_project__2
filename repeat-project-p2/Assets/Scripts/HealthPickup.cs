@@ -10,11 +10,15 @@ public class HealthPickup : MonoBehaviour
     public float floatSpeed = 1f;
     public GameObject pickupEffectPrefab;
 
+    private AudioSource healSound;
+
     private Vector3 startPosition;
 
     private void Start()
     {
         startPosition = transform.position;
+
+        healSound = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -31,11 +35,16 @@ public class HealthPickup : MonoBehaviour
                 Debug.Log("Health increased by: " + healthAmount);
             }
 
+            if (healSound != null)
+            {
+                healSound.Play();
+            }
+
             if (pickupEffectPrefab != null)
             {
                 Instantiate(pickupEffectPrefab, transform.position, Quaternion.identity);
             }
-            Destroy(gameObject);
+            Destroy(gameObject, healSound != null ? healSound.clip.length : 0f);
         }
     }
 
