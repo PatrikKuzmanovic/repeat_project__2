@@ -360,6 +360,7 @@
 "Assets/Scripts/GunPickup.cs"
 "Assets/Scripts/HealthPickup.cs"
 "Assets/Scripts/LapCounter.cs"
+"Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/RoadArchitectSystem.cs"
 "Assets/Scripts/ShootBullet.cs"
