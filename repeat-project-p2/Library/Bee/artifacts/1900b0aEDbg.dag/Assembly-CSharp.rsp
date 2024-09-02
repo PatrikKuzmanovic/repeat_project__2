@@ -362,6 +362,7 @@
 "Assets/Scripts/LapCounter.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/OptionsMenuController.cs"
+"Assets/Scripts/PauseMenuController.cs"
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/RoadArchitectSystem.cs"
 "Assets/Scripts/ShootBullet.cs"
