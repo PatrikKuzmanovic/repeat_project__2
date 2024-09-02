@@ -16,11 +16,28 @@ public class CarController : MonoBehaviour
     [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
 
+    [SerializeField] private AudioClip engineSoundHighOff;
+    private AudioSource audioSource;
+
     private Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        audioSource= rb.GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        if (engineSoundHighOff != null)
+        {
+            audioSource.clip = engineSoundHighOff;
+            audioSource.loop = true;
+            audioSource.Play();
+            audioSource.Pause();
+        }
     }
     private void FixedUpdate()
     {
@@ -28,6 +45,7 @@ public class CarController : MonoBehaviour
         HandleAcceleration();
         SteeringHandler();
         UpdateWheels();
+        UpdateEngineSound();
     }
 
     private void GetInput()
@@ -93,5 +111,19 @@ public class CarController : MonoBehaviour
         wheelCollider.GetWorldPose(out pos, out rot);
         wheelTransform.rotation = rot;
         wheelTransform.position = pos;
+    }
+
+    private void UpdateEngineSound()
+    {
+        if (rb.velocity.magnitude > 0.1f && !audioSource.isPlaying)
+        {
+            audioSource.UnPause();
+        }
+        else if (rb.velocity.magnitude <= 0.1f && audioSource.isPlaying)
+        {
+            audioSource.Pause();
+        }
+
+        audioSource.pitch = 0.5f + (rb.velocity.magnitude / 10f);
     }
 }
