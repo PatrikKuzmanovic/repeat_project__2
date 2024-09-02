@@ -11,6 +11,7 @@ public class ShootBullet : MonoBehaviour
 
     public GameObject flameGunEffectPrefab;
     public float flameGunDuration = 3f;
+    public int flameGunDamage = 5;
     public float flameGunCooldownDuration = 5f;
 
     private int bulletsFired = 0;
@@ -103,6 +104,7 @@ public class ShootBullet : MonoBehaviour
                 if (particleSystem != null)
                 {
                     particleSystem.Play();
+                    Destroy(activeFlameGunEffect, flameGunDuration);
                 }
             }
         }
@@ -137,7 +139,17 @@ public class ShootBullet : MonoBehaviour
             activeFlameGunEffect.transform.rotation = bulletSpawnPoint.rotation;
         }
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (isFlameGunActive && isFlameGunShooting && other.CompareTag("Enemy"))
+        {
+            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(flameGunDamage);
+            }
+        }
+    }
     public void SwitchToFlameGun()
     {
         Debug.Log("Switched to Flame Gun");
